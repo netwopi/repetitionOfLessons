@@ -1,36 +1,34 @@
 package InheritanceAndPolymorphism.figures;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.Date;
 
-public class Rectangle {
-    private int width;
-    private int height;
+public class Rectangle extends Figure {
+    private double width;
+    private double height;
     private LocalDateTime createDate = LocalDateTime.now();
 
-    public Rectangle(int width, int height) {
+    public Rectangle(double width, double height) {
         this.width = width;
         this.height = height;
     }
 
-    public int getWidth() {
+    public double getWidth() {
         return width;
     }
 
-    public void setWidth(int width) {
+    public void setWidth(double width) {
         this.width = width;
     }
 
-    public int getHeight() {
+    public double getHeight() {
         return height;
     }
 
-    public void setHeight(int height) {
+    public void setHeight(double height) {
         this.height = height;
     }
 
-    public int getSquare(){
+    public double getSquare(){
         return width*height;
     }
 
