@@ -1,9 +1,8 @@
 package InheritanceAndPolymorphism.bank;
 
 public class BankAccount {
-    public Integer check;
-    public
-    Integer variableAmount;
+    private double check;
+    private Integer variableAmount;
 
     public BankAccount() {
     }
@@ -13,11 +12,11 @@ public class BankAccount {
         this.variableAmount = variableAmount;
     }
 
-    public Integer getCheck() {
+    public double getCheck() {
         return check;
     }
 
-    public void setCheck(Integer check) {
+    public void setCheck(double check) {
         this.check = check;
     }
 
@@ -33,17 +32,17 @@ public class BankAccount {
         this.check = check;
     }
     //снятие со счета
-    public Integer WithdrawMoney(){
+    public double WithdrawMoney(){
         check = check-variableAmount;
         return check;
     }
     //пополнение счета
-    public Integer ReplenishmentOfTheBalance(){
+    public double ReplenishmentOfTheBalance(){
         check = check+variableAmount;
         return check;
     }
     //Фактический счет
-    public Integer GetAccountBalance(){
+    public double GetAccountBalance(){
         return check;
     }
 }

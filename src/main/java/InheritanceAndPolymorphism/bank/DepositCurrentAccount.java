@@ -1,6 +1,9 @@
 package InheritanceAndPolymorphism.bank;
 
+import java.time.LocalDate;
+
 public class DepositCurrentAccount extends BankAccount{
+    LocalDate localDate = LocalDate.now();
     public int num = 0;
     public DepositCurrentAccount() {
     }
@@ -15,7 +18,7 @@ public class DepositCurrentAccount extends BankAccount{
 
 
     @Override
-    public Integer WithdrawMoney() {
+    public double WithdrawMoney() {
         if(num>0){
             System.out.println("Нельзя");
         }else {
@@ -26,10 +29,13 @@ public class DepositCurrentAccount extends BankAccount{
     }
 
     @Override
-    public Integer ReplenishmentOfTheBalance() {
+    public double ReplenishmentOfTheBalance() {
         if (num>0){
             System.out.println("Нельзя снимать в этом месяце");
+           LocalDate year = localDate.plusDays(30);
+            System.out.println("Вы сможите снять только "  + year);
         }else {
+
             num++;
             return super.ReplenishmentOfTheBalance();
         }
@@ -37,7 +43,7 @@ public class DepositCurrentAccount extends BankAccount{
     }
 
     @Override
-    public Integer GetAccountBalance() {
+    public double GetAccountBalance() {
         return super.GetAccountBalance();
     }
 }

@@ -1,8 +1,13 @@
 package InheritanceAndPolymorphism.figures;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.Date;
+
 public class Rectangle {
-    public int width;
-    public int height;
+    private int width;
+    private int height;
+    private LocalDateTime createDate = LocalDateTime.now();
 
     public Rectangle(int width, int height) {
         this.width = width;
@@ -27,5 +32,9 @@ public class Rectangle {
 
     public int getSquare(){
         return width*height;
+    }
+
+    public LocalDateTime getCreateDate() {
+        return createDate;
     }
 }
